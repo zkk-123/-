@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+<html lang="zh">
+
+
+
+
+
+
+
+<head>
+
+
+
+
+
+
+
+    <meta charset="UTF-8">
+
+
+
+
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+
+
+
+    <title>贵州生态文明建设先行区成就展示</title>
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="styles.css">
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<body>
+
+
+
+
+
+
+
+    <header>
+
+
+
+
+
+
+
+        <h1>贵州生态文明建设先行区成就展示</h1>
+
+
+
+
+
+
+
+    </header>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+    <main>
+
+
+
+
+
+
+
+        <section class="overview-cards">
+
+
+
+
+
+
+
+            <div class="card">
+
+
+
+
+
+
+
+                <h3>森林覆盖率</h3>
+
+
+
+
+
+
+
+                <div class="big-number">62.12%</div>
+
+
+
+
+
+
+
+                <div class="trend positive">↑ 2.5%</div>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <div class="card">
+
+
+
+
+
+
+
+                <h3>水质达标率</h3>
+
+
+
+
+
+
+
+                <div class="big-number">95.8%</div>
+
+
+
+
+
+
+
+                <div class="trend positive">↑ 1.2%</div>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <div class="card">
+
+
+
+
+
+
+
+                <h3>空气质量优良天数</h3>
+
+
+
+
+
+
+
+                <div class="big-number">320天</div>
+
+
+
+
+
+
+
+                <div class="trend positive">↑ 15天</div>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+        </section>
+
+
+
+
+
+
+
+        <section class="development-highlights">
+
+            <h2 class="section-title">生态文明建设重点领域</h2>
+
+            <div class="highlight-cards">
+
+                <div class="highlight-card">
+
+                    <div class="icon">🌳</div>
+
+                    <h3>生态产业</h3>
+
+                    <div class="stat">绿色产业规模</div>
+
+                    <div class="value">1.5万亿</div>
+
+                    <div class="description">生态特色产业增加值占GDP比重35%</div>
+
+                </div>
+
+                <div class="highlight-card">
+
+                    <div class="icon">💧</div>
+
+                    <h3>水环境治理</h3>
+
+                    <div class="stat">治理成效</div>
+
+                    <div class="value">96.5%</div>
+
+                    <div class="description">主要河流水质优良比例</div>
+
+                </div>
+
+                <div class="highlight-card">
+
+                    <div class="icon">♻️</div>
+
+                    <h3>循环经济</h3>
+
+                    <div class="stat">资源利用</div>
+
+                    <div class="value">85.2%</div>
+
+                    <div class="description">工业固废综合利用率</div>
+
+                </div>
+
+                <div class="highlight-card">
+
+                    <div class="icon">🌞</div>
+
+                    <h3>清洁能源</h3>
+
+                    <div class="stat">能源结构</div>
+
+                    <div class="value">42.8%</div>
+
+                    <div class="description">清洁能源占比</div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+
+
+
+        <section class="industry-development">
+
+            <div class="chart-container full-width">
+
+                <h2>重点产业发展态势</h2>
+
+                <canvas id="industryChart"></canvas>
+
+            </div>
+
+        </section>
+
+
+
+
+
+
+
+        <section class="charts-grid">
+
+
+
+
+
+
+
+            <div class="chart-container">
+
+
+
+
+
+
+
+                <h2>森林覆盖率变化趋势</h2>
+
+
+
+
+
+
+
+                <canvas id="forestCoverageChart"></canvas>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <div class="chart-container">
+
+
+
+
+
+
+
+                <h2>贵州省生态地图</h2>
+
+
+
+
+
+
+
+                <div id="guizhouMap"></div>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <div class="chart-container">
+
+
+
+
+
+
+
+                <h2>水资源质量分布</h2>
+
+
+
+
+
+
+
+                <canvas id="waterQualityChart"></canvas>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <div class="chart-container">
+
+
+
+
+
+
+
+                <h2>污染物排放趋势</h2>
+
+
+
+
+
+
+
+                <canvas id="pollutionChart"></canvas>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+        </section>
+
+
+
+
+
+
+
+    </main>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+<script src="charts.js"></script>
+
+
+
+
+
+
+
+</html> 
+
+
+
+
+
+
+
