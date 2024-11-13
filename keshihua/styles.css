@@ -1,0 +1,604 @@
+:root {
+
+
+
+    --primary-color: #2c8850;
+
+
+
+    --secondary-color: #1a5c34;
+
+
+
+    --background-color: #f5f9f7;
+
+
+
+    --card-background: #ffffff;
+
+
+
+    --text-primary: #2c3e50;
+
+
+
+    --text-secondary: #546e7a;
+
+
+
+    --accent-green: #4CAF50;
+
+
+
+    --accent-blue: #03A9F4;
+
+
+
+}
+
+
+
+
+
+
+
+body {
+
+
+
+    margin: 0;
+
+
+
+    padding: 0;
+
+
+
+    font-family: "Microsoft YaHei", sans-serif;
+
+
+
+    background-color: var(--background-color);
+
+
+
+}
+
+
+
+
+
+
+
+header {
+
+
+
+    background-color: var(--primary-color);
+
+
+
+    color: white;
+
+
+
+    padding: 2rem;
+
+
+
+    text-align: center;
+
+
+
+}
+
+
+
+
+
+
+
+main {
+
+
+
+    max-width: 1200px;
+
+
+
+    margin: 0 auto;
+
+
+
+    padding: 2rem;
+
+
+
+}
+
+
+
+
+
+
+
+.overview-cards {
+
+
+
+    display: grid;
+
+
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+
+
+    gap: 2rem;
+
+
+
+    margin-bottom: 3rem;
+
+
+
+}
+
+
+
+
+
+
+
+.card {
+
+
+
+    background: var(--card-background);
+
+
+
+    padding: 1.5rem;
+
+
+
+    border-radius: 10px;
+
+
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+
+
+    text-align: center;
+
+
+
+}
+
+
+
+
+
+
+
+.big-number {
+
+
+
+    font-size: 2.5rem;
+
+
+
+    font-weight: bold;
+
+
+
+    color: var(--primary-color);
+
+
+
+    margin: 1rem 0;
+
+
+
+}
+
+
+
+
+
+
+
+.trend {
+
+
+
+    font-size: 0.9rem;
+
+
+
+}
+
+
+
+
+
+
+
+.trend.positive {
+
+
+
+    color: #28a745;
+
+
+
+}
+
+
+
+
+
+
+
+.charts-grid {
+
+
+
+    display: grid;
+
+
+
+    grid-template-columns: repeat(2, 1fr);
+
+
+
+    gap: 2rem;
+
+
+
+}
+
+
+
+
+
+
+
+.chart-container {
+
+
+
+    background: var(--card-background);
+
+
+
+    padding: 2rem;
+
+
+
+    border-radius: 15px;
+
+
+
+    box-shadow: 0 4px 20px rgba(44, 136, 80, 0.08);
+
+
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+
+
+}
+
+
+
+
+
+
+
+.chart-container:hover {
+
+
+
+    transform: translateY(-5px);
+
+
+
+    box-shadow: 0 6px 25px rgba(44, 136, 80, 0.12);
+
+
+
+}
+
+
+
+
+
+
+
+.chart-container h2 {
+
+
+
+    color: var(--secondary-color);
+
+
+
+    font-size: 1.2rem;
+
+
+
+    margin-bottom: 1rem;
+
+
+
+}
+
+
+
+
+
+
+
+#guizhouMap {
+
+
+
+    width: 100%;
+
+
+
+    height: 400px;
+
+
+
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+
+
+    .charts-grid {
+
+
+
+        grid-template-columns: 1fr;
+
+
+
+    }
+
+
+
+    
+
+
+
+    #guizhouMap {
+
+
+
+        height: 300px;
+
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+.section-title {
+
+    text-align: center;
+
+    color: var(--text-primary);
+
+    font-size: 1.8rem;
+
+    margin: 3rem 0 2rem;
+
+    position: relative;
+
+}
+
+
+
+.section-title::after {
+
+    content: '';
+
+    display: block;
+
+    width: 60px;
+
+    height: 3px;
+
+    background: var(--primary-color);
+
+    margin: 1rem auto;
+
+}
+
+
+
+.development-highlights {
+
+    margin-bottom: 4rem;
+
+}
+
+
+
+.highlight-cards {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+    gap: 2rem;
+
+    margin: 2rem 0;
+
+}
+
+
+
+.highlight-card {
+
+    background: linear-gradient(145deg, var(--card-background), #f8faf9);
+
+    padding: 2rem;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+    text-align: center;
+
+    transition: transform 0.3s ease;
+
+    border: 1px solid rgba(44, 136, 80, 0.15);
+
+}
+
+
+
+.highlight-card:hover {
+
+    transform: translateY(-5px);
+
+}
+
+
+
+.highlight-card .icon {
+
+    font-size: 3rem;
+
+    margin-bottom: 1.5rem;
+
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    opacity: 0.9;
+
+}
+
+
+
+.highlight-card h3 {
+
+    color: var(--text-primary);
+
+    font-size: 1.3rem;
+
+    margin: 0.5rem 0;
+
+}
+
+
+
+.highlight-card .stat {
+
+    color: var(--text-secondary);
+
+    font-size: 0.9rem;
+
+    margin-top: 1rem;
+
+}
+
+
+
+.highlight-card .value {
+
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    font-size: 2.2rem;
+
+    font-weight: bold;
+
+    margin: 0.8rem 0;
+
+}
+
+
+
+.highlight-card .description {
+
+    color: var(--text-secondary);
+
+    font-size: 0.9rem;
+
+    margin-top: 1rem;
+
+}
+
+
+
+.industry-development {
+
+    margin-bottom: 3rem;
+
+}
+
+
+
+.full-width {
+
+    grid-column: 1 / -1;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
